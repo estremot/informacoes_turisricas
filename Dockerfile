@@ -5,8 +5,8 @@ FROM maven:3.9.6-amazoncorretto-21 as build
 WORKDIR /app
 
 #copia o arquivo pom.xml e os arquivos de origem
-COPY pom.xml .
-COPY src ./src
+COPY . .
+
 
 #Executa o comando Maven para compilar e empacotar
 RUN mvn clean package -X -DskipTests 
