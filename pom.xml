@@ -11,7 +11,7 @@
 	<groupId>com.etec</groupId>
 	<artifactId>informacoes_turisricas</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>informacoes_turisricas</name>
 	<description>Informações Turísticas</description>
 	<url/>

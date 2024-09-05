@@ -14,5 +14,5 @@ RUN mvn clean package -X -DskipTests
 #define a imagem base para a execução da aplicação
 FROM openjdk:21-ea-10-jdk-slim
 WORKDIR /app
-COPY --from=build ./app/target/*.jar ./informacoes_turisricas-0.0.1-SNAPSHOT.war
-ENTRYPOINT [ "java -war ./informacoes_turisricas-0.0.1-SNAPSHOT.war"  ]
+COPY --from=build ./app/target/*.jar ./informacoes_turisricas-0.0.1-SNAPSHOT.jar
+ENTRYPOINT [ "java -war ./informacoes_turisricas-0.0.1-SNAPSHOT.jar"  ]
