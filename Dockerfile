@@ -1,5 +1,5 @@
 #Use a imagem Maven com Eclipse Temurin JDK 21
-FROM maven:3.9.6-amazoncorretto-21 as build
+FROM maven:3.9.6-amazoncorretto-17 as build
 
 #Define o diretório de trabalho
 WORKDIR /app
@@ -12,7 +12,7 @@ COPY . .
 RUN mvn clean package -X -DskipTests 
 
 #define a imagem base para a execução da aplicação
-FROM openjdk:21-ea-10-jdk-slim
+FROM openjdk:17-ea-10-jdk-slim
 WORKDIR /app
 COPY --from=build ./app/target/*.jar ./informacoes_turisricas-0.0.1-SNAPSHOT.jar
 ENTRYPOINT java -jar ./informacoes_turisricas-0.0.1-SNAPSHOT.jar
