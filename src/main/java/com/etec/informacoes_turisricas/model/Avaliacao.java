@@ -73,7 +73,9 @@ public class Avaliacao {
 	}
 
 
-
+	public Avaliacao() {
+		
+	}
 
 	public Avaliacao( Date dataavaliacao,  Usuario usuario) {
 		super();
